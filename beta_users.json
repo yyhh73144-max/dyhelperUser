@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-04-03",
+  "update_time": "2026-04-04",
   "notice": "内测持续更新中",
   "beta_users": [
     {
@@ -71,6 +71,11 @@
       "uid": "3095865296704392",
       "expire": "2029-12-31",
       "dynamic_code_sign": "LAp/fG+AGA2EvZlWH/yQC8MwcHUcsVS+HT4HqNWpkufGfd401lQmy6sUYWZ0Rd/JnWoh3PjpPwdSw0WwYlGHs8D3Rwk4q16QRe8q+BaTvIPDqGtbrhekQo2dHlhr68ihm5xMg0aVrowvGvKyZ1fBN3ZnvzChDVRsMKPWyFUAD/1s8xDAIZ3juhsVeqzEXPH2sY+C5QVqkkJdYeTLQ1AxlI8ICYYVijWs+fFVW/8D4mWrR3r42PHygJAXyw9pPuK0yYgiIZ0pPj6WlEMO5puIcHsASq9Y/rQuQpcq8a5VAT+aCf/8kHeGqavfDtp15bqfQNcFeaUPkSEacpjzmULSeQ=="
+    },
+    {
+      "uid": "3692608771619403",
+      "expire": "2029-12-31",
+      "dynamic_code_sign": "S5NHIoMiIg/Iq3Bu1h0tWtBEaC3VjL59UdrRwO8PwJcB40AXpPJMS7zu25nX1cI+PisXQGge8x1OLRRt8rZ6sdxvmrqYfVceQBWvO4+RWyZUK9jTZm/DEgAymao4mYnLmtgwvYTZKvNf0tmYmDvfPKB4pY5JpQZC188y+AqTyx0/IrGLlR3bo4c57GQZDOac6nstVt1J56E3Nxt9H7nMJJnsB607Z5igy+ac5XxeGM8O5MsFOVvJ05PDEGetI1J9cV1ZvPtt+349HuWxDqR4u/8ZBIcRl578yE8B2if/1+Fs+nG4on9iWBJFiph7efrzZ/n53ROLpGAwRcak1ahWjA=="
     }
   ]
 }
