@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-04-06",
+  "update_time": "2026-04-11",
   "notice": "内测持续更新中",
   "beta_users": [
     {
@@ -122,10 +122,10 @@
       "expire": "2029-12-31",
       "dynamic_code_sign": "U720JQhtfnx8FQVLrrbMUdDUjxxh2feKG1Qb+SuCJPZi19TPUJTvE7k2MBlltlmXm59fL5P5zV2TMDEPvQifABPyUi0OIsiVBFVRnfi90G05/whevyO5zFeATxsTwULV0qI31LBdLTWqCMJbZB8p7zWnbuFrkLGRTxBNoPoSntFOJGD8OGIj1MCMZ1Jxe8lCNSgwvt9ahRFAsPa1HFEilLeRkpPH8uZ/o/0jnQJsCNoW9MHMozex9xrIA8sOslFW0vYMLSJwYDGnVvq2YcehKBrUiu9dB8WqofaarmgjChAeXeL9ZbX5j5FyoIg0WdLXG2OZplrPLiifn/ovuhDJfA=="
     },
-{
-      "uid": "84785099847",
+    {
+      "uid": "2960329467761543",
       "expire": "2029-12-31",
-      "dynamic_code_sign": "U720JQhtfnx8FQVLrrbMUdDUjxxh2feKG1Qb+SuCJPZi19TPUJTvE7k2MBlltlmXm59fL5P5zV2TMDEPvQifABPyUi0OIsiVBFVRnfi90G05/whevyO5zFeATxsTwULV0qI31LBdLTWqCMJbZB8p7zWnbuFrkLGRTxBNoPoSntFOJGD8OGIj1MCMZ1Jxe8lCNSgwvt9ahRFAsPa1HFEilLeRkpPH8uZ/o/0jnQJsCNoW9MHMozex9xrIA8sOslFW0vYMLSJwYDGnVvq2YcehKBrUiu9dB8WqofaarmgjChAeXeL9ZbX5j5FyoIg0WdLXG2OZplrPLiifn/ovuhDJfA=="
+      "dynamic_code_sign": "mx6ilmQRy7ClCLy8OjxJzCEdtK3+J/rUJ4T4gOsjfPML/21IpyE0wHT9E9/cBO5+r8NrwocLN7xYqz+EvISUK9xdUnvWbV20p0mm4MOBvRA3M+ll34fr+KuTIILLQzqDhCYT/+dMbwdjYb/PddSRqDHhXRhA7evil3vB9jnmvmWafu1eZKogv496KUN/UZqaWVVUpKUpWEmO4N8Sn1LVJoIVkhx/mtv25Xslki2QkaS8dgAREQDZTUG8TmlD+YhHSfdn089xiuXFT94yY+skEfhrDYkl/KFX1PUdBPe1peW2IZ5alHKpwZIKhROVhjRiFr6Zb/naDAsSvPrw5IZOYA=="
     }
   ]
 }
