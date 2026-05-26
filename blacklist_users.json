@@ -3,7 +3,7 @@
   "blacklist_users": [
     {
       "uid": "70008778893",
-      "enabled": true,
+      "enabled": false,
       "reason": "abuse"
     }
   ]
