@@ -2,8 +2,8 @@
   "schema_version": 1,
   "blacklist_users": [
     {
-      "uid": "",
-      "enabled": false,
+      "uid": "2455670067038896",
+      "enabled": true,
       "reason": "abuse"
     }
   ]
