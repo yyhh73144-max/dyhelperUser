@@ -2,7 +2,7 @@
   "schema_version": 1,
   "blacklist_users": [
     {
-      "uid": "70008778893",
+      "uid": "",
       "enabled": true,
       "reason": "abuse"
     }
