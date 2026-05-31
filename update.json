@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "latest": {
-    "version_code": 21,
+    "version_code": 23,
     "version_name": "1.2.0",
-    "download_url": "https://github.com/yyhh73144-max/dyhelperUser/releases/download/main/DYHelper1.2.0.apk",
-    "message": "新增 评论区输入面板可隐藏同时发布作品新增 续火内容支持每日一言，支持每个人自定义续火内容词，支持拖动分组优化 动图合并采用原生合并接口 适配更多机型优化 下载逻辑"
+    "download_url": "https://github.com/yyhh73144-max/dyhelperUser/releases/download/main/DYHelper1.2.2.apk",
+    "message": "新增 评论区语音替换发送新增 私信语音替换发送优化动图下载，优化评论区动图下载，尝试修复火花续期后不可见续期的消息（未验证）"
   }
 }
