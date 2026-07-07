@@ -1,1 +1,13 @@
-
+{
+  "schema": 1,
+  "version": "2026-07-08",
+  "algorithm": "HMAC-SHA256/local-so-key/v1",
+  "description": "WXDAOCHU",
+  "users": [
+    {
+      "wxid": "wxu1_218e9e2de3df85aa246cece20c4db9c01815265fc61a1cb4a0a1de7b5fad47c4",
+      "enabled": true,
+      "note": ""
+    }
+  ]
+}
