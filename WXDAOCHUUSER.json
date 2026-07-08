@@ -5,7 +5,12 @@
   "description": "WXDAOCHU",
   "users": [
     {
-      "wxid": "wxu1_218e9e2de3df85aa246cece20c4db9c01815265fc61a1cb4a0a1de7b5fad47c4",
+      "wxid": "wxu2_9cf2eca91011e272d888a90a385fab2b11a815944a97a877e913e5318a7b4076",
+      "enabled": true,
+      "note": ""
+    },
+    {
+      "wxid": "wxu2_2d19aa9ecf4b7a88e6e31b9a96756cd7a77f147fb1ee0ebd7e77547e5fc51ea0",
       "enabled": true,
       "note": ""
     }
