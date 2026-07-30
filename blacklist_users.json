@@ -5,6 +5,11 @@
       "uid": "2455670067038896",
       "enabled": true,
       "reason": "abuse"
+    },
+     {
+      "uid": "2295427881514318",
+      "enabled": true,
+      "reason": "abuse"
     }
   ]
 }
