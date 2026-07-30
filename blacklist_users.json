@@ -4,17 +4,13 @@
     {
       "uid": "2455670067038896",
       "enabled": true,
-      "reason": "恶意传播违规内容"
+      "reason": "在抖音APP传播模块"
     },
-    {
-      "uid": "70008778893",
-      "enabled": true,
-      "reason": "测试"
-    },
+
     {
       "uid": "2295427881514318",
       "enabled": true,
-      "reason": "恶意传播违规内容"
+      "reason": "在抖音APP传播模块"
     }
   ]
 }
