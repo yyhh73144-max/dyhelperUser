@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "database": {
+    "name": "geonames_regions_zh.sqlite",
+    "size": 843579392,
+    "sha256": "79146a4a8efa6874bf8eb2322761f0115fbf96ae8287192d32a3e8a8b99754d2"
+  },
+  "archive": {
+    "name": "geonames_regions_zh.zip",
+    "format": "zip",
+    "size": 276158593,
+    "sha256": "34585a1ad5a1c03c546acb73516d995f6ef7a54e914b48b618b8d1b199b2b31d"
+  },
+  "partSizeBytes": 25000000,
+  "partCount": 12,
+  "parts": [
+    {
+      "number": 1,
+      "name": "geonames_regions_zh.zip.001",
+      "size": 25000000,
+      "sha256": "7f388d39f349e5893d3562d4333777b318f4de1ff064ac6c6e9b7bd6f107ce03"
+    },
+    {
+      "number": 2,
+      "name": "geonames_regions_zh.zip.002",
+      "size": 25000000,
+      "sha256": "39fec7dc851c357586b1b2d5104ffb19ae4263d2a3eca60f051eb0385d77c73f"
+    },
+    {
+      "number": 3,
+      "name": "geonames_regions_zh.zip.003",
+      "size": 25000000,
+      "sha256": "c3878ba34ee3a4d86e433bebc8acd9617e6b9856fc708652ed6c77d237bf9e63"
+    },
+    {
+      "number": 4,
+      "name": "geonames_regions_zh.zip.004",
+      "size": 25000000,
+      "sha256": "b0c11aae8130e7c938c1d8830706f42215ad3d187e341f7208b2cf7b87d35c42"
+    },
+    {
+      "number": 5,
+      "name": "geonames_regions_zh.zip.005",
+      "size": 25000000,
+      "sha256": "679e79705022d16a7aa2200dc9daf225059046af2f99c9ac84c4881db67e92b1"
+    },
+    {
+      "number": 6,
+      "name": "geonames_regions_zh.zip.006",
+      "size": 25000000,
+      "sha256": "7ab175a7ab9b888fb95689fdd9662c946c717ea440e19b4f830946a6d342ce28"
+    },
+    {
+      "number": 7,
+      "name": "geonames_regions_zh.zip.007",
+      "size": 25000000,
+      "sha256": "d469373b65c523bf0b1d1b0ca96124fe3db47e76d94cd8d12b2eeb5de66ef06e"
+    },
+    {
+      "number": 8,
+      "name": "geonames_regions_zh.zip.008",
+      "size": 25000000,
+      "sha256": "f943c91be163641fee94fe758a14ebf0fc1d5507ce3d6a6c76184c9a039be661"
+    },
+    {
+      "number": 9,
+      "name": "geonames_regions_zh.zip.009",
+      "size": 25000000,
+      "sha256": "f642a9a597fb61f33526a43538708fc9942abbeef6ad85c94df7efd09b949ac4"
+    },
+    {
+      "number": 10,
+      "name": "geonames_regions_zh.zip.010",
+      "size": 25000000,
+      "sha256": "ef7f3b34d71ff44e6c754d18907aa19eb2972c199c93aaa2ed93073550e556dc"
+    },
+    {
+      "number": 11,
+      "name": "geonames_regions_zh.zip.011",
+      "size": 25000000,
+      "sha256": "31041dfb4237c4d4ae5663a3c6f8f16104ecfe8c75dc70df16d1b7691a562e53"
+    },
+    {
+      "number": 12,
+      "name": "geonames_regions_zh.zip.012",
+      "size": 1158593,
+      "sha256": "7afb2847bf979c44c3dcc7d435024d74c96a2dc66e536a4204216b3a2a2490f8"
+    }
+  ]
+}
