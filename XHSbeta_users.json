@@ -1,1 +1,10 @@
-
+{
+  "beta_users": [
+    {
+      "uid": "XHS_USERID_HERE",
+      "expire": "2099-12-31"
+    }
+  ],
+  "update_time": "2026-08-04",
+  "notice": "XHS 内测名单示例"
+}
