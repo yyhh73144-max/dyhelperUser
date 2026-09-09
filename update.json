@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "latest": {
-    "version_code": 80,
-    "version_name": "1.6.0",
-    "download_url": "https://github.com/yyhh73144-max/dyhelperUser/releases/download/main/DYHelper1.6.0.apk",
-    "message": "1.6.0(仅适配400301 40.3)发布频道：https://t.me/DYHelperDownload，控件透明度控制 -修复部分底栏隐藏导致文字不可见问题 -修复侧边长按倍速的文案会和底栏冲突的问题 -修复全屏模式会导致和底栏文字冲突的问题 底栏图标 -新增可导入的底栏图标包 可替换底栏图标 -图标包制作指南： 续火管理 -修复挂机时抖音前台无法检测到日期更替事件导致未触发续火 悬浮菜单 -新增圆形布局 -新建加入过渡动画 -新增加入可预览排版排序 -新增可自定义按钮数量 -新增支持贴边逻辑 下载管理 -支持作者名字文件夹分类 -顶部通知栏优化动画效果 视频倍速扩展 -修复视频倍速扩展在HKP框架下开启会闪退的问题 -长按倍速扩展-修复在40.3不可用的问题 私信语音 -修复保存私信语音 -修复转发语音 -修复长按语音条菜单内无 保存语音,转发语音的选项 沉浸状态栏 -修复当仅开启隐藏小白条（导航栏）时会同时隐藏状态栏的问题 新增始终保持抖音亮屏功能"
+    "version_code": 0,
+    "version_name": "",
+    "download_url": "https://github.com/yyhh73144-max/dyhelperUser/releases/download/main/",
+    "message": ""
   }
 }
