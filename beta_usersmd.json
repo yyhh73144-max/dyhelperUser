@@ -6061,10 +6061,6 @@
     {
       "uid": "ed24bddeb9a6835672257d6c7fa474e5",
       "expire": "2029-12-31"
-    },
-    {
-      "uid": "eff01737a0312d299ac687f2c8813d4c",
-      "expire": "2029-12-31"
     }
   ],
   "uid_encoding": "md5"
