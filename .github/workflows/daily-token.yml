@@ -48,12 +48,13 @@ jobs:
           DAILY_TOKEN_SIGNING_KEY: ${{ secrets.DAILY_TOKEN_SIGNING_KEY }}
         run: |
           python - <<'PY'
-          import os, sys, time, pathlib
+          import os, sys, time, pathlib, hashlib
 
           from cryptography.hazmat.primitives import hashes, serialization
           from cryptography.hazmat.primitives.asymmetric import padding
 
           TARGET = pathlib.Path("token/daily_token.token")
+          FINGERPRINT = pathlib.Path("token/key_fingerprint.txt")
           THRESHOLD_DAYS = 60
           VALID_DAYS = 180
           PSS_SALT = 32
@@ -64,6 +65,22 @@ jobs:
                   if line.startswith("expires="):
                       return int(line.split("=", 1)[1])
               return 0
+
+          # 每次运行都先校验私钥：否则「不需要续签」的时候 secret 根本不会被读，
+          # 填错也要等几个月后真正续签时才暴露，而那时令牌已经快到期了。
+          pem = os.environ.get("DAILY_TOKEN_SIGNING_KEY", "").strip()
+          if not pem:
+              print("失败：缺少 Secret DAILY_TOKEN_SIGNING_KEY")
+              sys.exit(1)
+          key = serialization.load_pem_private_key(pem.encode(), password=None)
+          der = key.public_key().public_bytes(
+              serialization.Encoding.DER, serialization.PublicFormat.SubjectPublicKeyInfo)
+          fingerprint = hashlib.sha256(der).hexdigest()
+          expected = FINGERPRINT.read_text().strip() if FINGERPRINT.is_file() else ""
+          if expected and fingerprint != expected:
+              print(f"失败：Secret 与 APK 内置公钥不是同一把（当前 {fingerprint[:16]}，期望 {expected[:16]}）")
+              sys.exit(1)
+          print(f"私钥校验通过：{fingerprint[:16]}")
 
           now = int(time.time())
           current = TARGET.read_text() if TARGET.is_file() else ""
@@ -92,13 +109,6 @@ jobs:
               print("无需续期（仅写心跳）")
               sys.exit(0)
 
-          pem = os.environ.get("DAILY_TOKEN_SIGNING_KEY", "").strip()
-          if not pem:
-              # 缺 Secret 时显式失败：静默跳过会让令牌在无人察觉的情况下到期。
-              print("失败：缺少 Secret DAILY_TOKEN_SIGNING_KEY")
-              sys.exit(1)
-
-          key = serialization.load_pem_private_key(pem.encode(), password=None)
           issued = now
           expires = issued + VALID_DAYS * 86400
           seq = int(time.strftime("%Y%m%d", time.gmtime(issued)))
