@@ -1,0 +1,125 @@
+# 每日令牌自动续期（部署在数据仓库 yyhh73144-max/dyhelperUser，不是代码仓库）。
+#
+# 做两件事：
+#   1. 每天检查 token/daily_token.token 的剩余有效期；
+#   2. 剩余不足 60 天时用 Secret 里的私钥重签一份 180 天有效的新令牌并提交。
+#
+# 为什么不每天无条件重签：仓库每天多一个 commit 没有意义，而「剩余不足才续」既保证
+# 永远有 ≥60 天余量，又把提交频率压到大约每 4 个月一次。
+#
+# 为什么不每天无条件重签也安全：客户端只看 expires，不看签发频率。只要文件里有更晚的
+# expires，它就会续到那一天。
+#
+# 需要的仓库 Secret：
+#   DAILY_TOKEN_SIGNING_KEY —— daily_token_signing_key.pem 的完整内容
+#
+# 本 workflow 自身每天运行，也顺带避免 GitHub 因 60 天无活动而停用定时任务。
+
+name: daily-token
+
+on:
+  schedule:
+    # 每天 03:17 UTC（GitHub cron 有 5–30 分钟延迟，这里不要求精确）。
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-token
+  cancel-in-progress: false
+
+jobs:
+  renew:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 安装密码学库
+        run: pip install --quiet cryptography
+
+      - name: 检查并续期
+        env:
+          DAILY_TOKEN_SIGNING_KEY: ${{ secrets.DAILY_TOKEN_SIGNING_KEY }}
+        run: |
+          python - <<'PY'
+          import os, sys, time, pathlib
+
+          from cryptography.hazmat.primitives import hashes, serialization
+          from cryptography.hazmat.primitives.asymmetric import padding
+
+          TARGET = pathlib.Path("token/daily_token.token")
+          THRESHOLD_DAYS = 60
+          VALID_DAYS = 180
+          PSS_SALT = 32
+          MAGIC = "DYTOKEN1"
+
+          def parse_expires(text):
+              for line in text.splitlines():
+                  if line.startswith("expires="):
+                      return int(line.split("=", 1)[1])
+              return 0
+
+          now = int(time.time())
+          current = TARGET.read_text() if TARGET.is_file() else ""
+          remaining = (parse_expires(current) - now) / 86400 if current else 0
+          print(f"当前剩余 {remaining:.1f} 天")
+
+          # 心跳：GitHub 会在仓库连续 60 天无提交时停用定时任务，而 cron 自身运行不算活跃。
+          # 若只在「剩余不足」时才提交，中间可能空档近 4 个月 -> cron 被停 -> 续期静默失效。
+          # 因此每 30 天写一次日期心跳，既不刷屏又保证活跃间隔 < 60 天。
+          heartbeat = TARGET.parent / "heartbeat.txt"
+          heartbeat.parent.mkdir(parents=True, exist_ok=True)
+          stale = True
+          if heartbeat.is_file():
+              try:
+                  stored = time.mktime(time.strptime(heartbeat.read_text().strip(), "%Y-%m-%d"))
+                  stale = (now - stored) > 30 * 86400
+              except Exception:
+                  stale = True
+          if stale:
+              heartbeat.write_text(time.strftime("%Y-%m-%d\n", time.gmtime(now)))
+              print("已更新心跳")
+          else:
+              print("心跳仍在有效期内")
+
+          if remaining >= THRESHOLD_DAYS:
+              print("无需续期（仅写心跳）")
+              sys.exit(0)
+
+          pem = os.environ.get("DAILY_TOKEN_SIGNING_KEY", "").strip()
+          if not pem:
+              # 缺 Secret 时显式失败：静默跳过会让令牌在无人察觉的情况下到期。
+              print("失败：缺少 Secret DAILY_TOKEN_SIGNING_KEY")
+              sys.exit(1)
+
+          key = serialization.load_pem_private_key(pem.encode(), password=None)
+          issued = now
+          expires = issued + VALID_DAYS * 86400
+          seq = int(time.strftime("%Y%m%d", time.gmtime(issued)))
+          material = "%s\nseq=%d\nissued=%d\nexpires=%d\nrevoked=\n" % (MAGIC, seq, issued, expires)
+          signature = key.sign(
+              material.encode(),
+              padding.PSS(mgf=padding.MGF1(hashes.SHA256()), salt_length=PSS_SALT),
+              hashes.SHA256())
+          TARGET.parent.mkdir(parents=True, exist_ok=True)
+          TARGET.write_text(material + "sig=" + signature.hex() + "\n")
+          print(f"已重签：seq={seq}，到期 {time.strftime('%Y-%m-%d', time.gmtime(expires))}")
+          PY
+
+      - name: 提交
+        run: |
+          if git diff --quiet -- token/daily_token.token token/heartbeat.txt; then
+            echo "无变化"
+            exit 0
+          fi
+          git config user.name "daily-token-bot"
+          git config user.email "daily-token-bot@users.noreply.github.com"
+          git add token/daily_token.token token/heartbeat.txt
+          git commit -m "chore: renew daily token"
+          git push
