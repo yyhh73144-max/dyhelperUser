@@ -124,12 +124,14 @@ jobs:
 
       - name: 提交
         run: |
-          if git diff --quiet -- token/daily_token.token token/heartbeat.txt; then
+          # 用 status 而不是 diff：新增（未跟踪）文件不会出现在 diff 里，
+          # 首次写心跳时会被判成「无变化」而不提交，活跃机制就白做了。
+          if [ -z "$(git status --porcelain -- token)" ]; then
             echo "无变化"
             exit 0
           fi
           git config user.name "daily-token-bot"
           git config user.email "daily-token-bot@users.noreply.github.com"
-          git add token/daily_token.token token/heartbeat.txt
+          git add --all token
           git commit -m "chore: renew daily token"
           git push
