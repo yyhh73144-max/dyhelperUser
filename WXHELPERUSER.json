@@ -43,6 +43,22 @@
       "plan_months": 1,
       "total_months": 1,
       "note": "测试"
+    },
+    {
+      "wxid": "wxu2_8c03e10c333403ddbb35a9371b6cf944d0d4c0e6e6ed19b4ce7ca01e136107ac",
+      "enabled": true,
+      "expires_at": "2026-12-20",
+      "plan_months": 1,
+      "total_months": 1,
+      "note": "测试"
+    },
+    {
+      "wxid": "wxu2_49a0b11600d95cacccb2d1885c02b1ff55a1bf91668429f65d602eff30e45438",
+      "enabled": true,
+      "expires_at": "2026-12-20",
+      "plan_months": 1,
+      "total_months": 1,
+      "note": "测试"
     }
   ],
   "plans": {
