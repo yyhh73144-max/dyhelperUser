@@ -74,5 +74,9 @@
       "months": 6,
       "days": 180
     }
+  },
+  "apply_jump": {
+    "enabled": true,
+    "encrypted_link": "wxl1_EWI4ZwLexjHQgJ496eKLGoxPZte6vzNH4odojg2zsy0JeR9mTeJXdu3u4S8oWGqpcGGpypyYsz6Cy2kpqb_CncVkuuOcV09mi1gliuopdq4UgoDuoHgqzvS_"
   }
 }
