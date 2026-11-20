@@ -10,25 +10,21 @@
       "expires_at": "2027-05-19",
       "plan_months": 6,
       "total_months": 6,
-      "total_amount": 50,
       "note": ""
     }
   ],
   "plans": {
     "1": {
       "months": 1,
-      "days": 30,
-      "price_cny": 10
+      "days": 30
     },
     "3": {
       "months": 3,
-      "days": 90,
-      "price_cny": 28
+      "days": 90
     },
     "6": {
       "months": 6,
-      "days": 180,
-      "price_cny": 50
+      "days": 180
     }
   }
 }
