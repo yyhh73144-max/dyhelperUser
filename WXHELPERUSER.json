@@ -11,6 +11,14 @@
       "plan_months": 6,
       "total_months": 6,
       "note": ""
+    },
+    {
+      "wxid": "wxu2_709e17d8f42ce43d22803a8d8e027452b2e9df531f538a1072b923ad981e077f",
+      "enabled": true,
+      "expires_at": "2026-12-20",
+      "plan_months": 1,
+      "total_months": 1,
+      "note": "测试"
     }
   ],
   "plans": {
@@ -26,9 +34,5 @@
       "months": 6,
       "days": 180
     }
-  },
-  "apply_jump": {
-    "enabled": true,
-    "encrypted_link": "wxl1_j0L2_qAdaxeULDTO-ESI-qnxFbPXEhKHMYXg_flUvkj14uf2uc01Xv6LFgNFw8cxdCmNNkTX8Yz98P0YbWcwMfhPoiV4-U1A412UYNWQ7iqHkwbkYS178ejP"
   }
 }
