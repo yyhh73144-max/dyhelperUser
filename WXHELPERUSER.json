@@ -67,6 +67,14 @@
       "plan_months": 6,
       "total_months": 6,
       "note": "所有者"
+    },
+    {
+      "wxid": "wxu2_6409275bbbd894f3ee2d4fd958946c544071829ac0f5dbe525c9b0fab72cae91",
+      "enabled": true,
+      "expires_at": "2026-12-20",
+      "plan_months": 1,
+      "total_months": 1,
+      "note": "测试"
     }
   ],
   "plans": {
