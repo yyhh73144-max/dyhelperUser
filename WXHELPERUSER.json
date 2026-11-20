@@ -1,18 +1,44 @@
-  {
-    "schema": 1,
-    "version": "2026-08-10",
-    "algorithm": "HMAC-SHA256/native-package-signature-key/v2",
-    "description": "WXHelper",
-    "users": [
-      {
-        "wxid": "wxu2_ffdd1a465ccf630b8f30a09e942748ed865e8ba051a9680f263ab17b4d9cb551",
-        "enabled": true,
-        "note": ""
-      },
-        {
-        "wxid": "wxu2_024ae1b1d056d6dcf14b80ce12b7a4a209d47d1b1c7c4a6c6cb3999560f7f8db",
-        "enabled": true,
-        "note": ""
-      }
-    ]
+{
+  "schema": 1,
+  "version": "2026-11-20",
+  "algorithm": "HMAC-SHA256/native-package-signature-key/v2",
+  "description": "WXHelper",
+  "users": [
+    {
+      "wxid": "wxu2_ffdd1a465ccf630b8f30a09e942748ed865e8ba051a9680f263ab17b4d9cb551",
+      "enabled": true,
+      "note": ""
+    },
+    {
+      "wxid": "wxu2_024ae1b1d056d6dcf14b80ce12b7a4a209d47d1b1c7c4a6c6cb3999560f7f8db",
+      "enabled": true,
+      "note": ""
+    },
+    {
+      "wxid": "wxu2_5ca1212cc5ec13d6b82f2b7dce8bfda12d976ead8c56472e318875831425b168",
+      "enabled": true,
+      "expires_at": "2027-05-19",
+      "plan_months": 6,
+      "total_months": 6,
+      "total_amount": 50,
+      "note": ""
+    }
+  ],
+  "plans": {
+    "1": {
+      "months": 1,
+      "days": 30,
+      "price_cny": 10
+    },
+    "3": {
+      "months": 3,
+      "days": 90,
+      "price_cny": 28
+    },
+    "6": {
+      "months": 6,
+      "days": 180,
+      "price_cny": 50
+    }
   }
+}
