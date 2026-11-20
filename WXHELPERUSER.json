@@ -35,6 +35,14 @@
       "plan_months": 1,
       "total_months": 1,
       "note": ""
+    },
+    {
+      "wxid": "wxu2_ffdd1a465ccf630b8f30a09e942748ed865e8ba051a9680f263ab17b4d9cb551",
+      "enabled": true,
+      "expires_at": "2026-12-20",
+      "plan_months": 1,
+      "total_months": 1,
+      "note": "测试"
     }
   ],
   "plans": {
