@@ -83,6 +83,14 @@
       "plan_months": 1,
       "total_months": 1,
       "note": "lwj"
+    },
+    {
+      "wxid": "wxu2_4d2ecf97d7e89bb857cc9d1594ab10b24b68036bf23acb30d3349f35d4385530",
+      "enabled": true,
+      "expires_at": "2027-02-18",
+      "plan_months": 3,
+      "total_months": 3,
+      "note": ""
     }
   ],
   "plans": {
