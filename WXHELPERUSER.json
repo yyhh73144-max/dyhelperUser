@@ -203,6 +203,14 @@
       "plan_months": 1,
       "total_months": 1,
       "note": ""
+    },
+    {
+      "wxid": "wxu2_0d2b5037220052c2051d7d4195ecdda30b336ba75fdcb31462b0e333596851dd",
+      "enabled": true,
+      "expires_at": "2026-12-24",
+      "plan_months": 1,
+      "total_months": 1,
+      "note": ""
     }
   ],
   "plans": {
