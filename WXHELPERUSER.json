@@ -267,6 +267,14 @@
       "plan_months": 1,
       "total_months": 1,
       "note": ""
+    },
+    {
+      "wxid": "wxu2_af8610a6106b1c44cdcfca1c2fb2770948b95753291d5148daa6f0c4ff9da9d8",
+      "enabled": true,
+      "expires_at": "2026-11-29",
+      "plan_months": 0,
+      "total_months": 0,
+      "note": "试用"
     }
   ],
   "plans": {
