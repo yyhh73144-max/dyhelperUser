@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "2026-11-26",
+  "version": "2026-11-27",
   "algorithm": "HMAC-SHA256/native-package-signature-key/v2",
   "description": "WXHelper",
   "users": [
@@ -275,6 +275,14 @@
       "plan_months": 0,
       "total_months": 0,
       "note": "试用"
+    },
+    {
+      "wxid": "wxu2_52e7efc2a4286ccdaa74fddfa5599fe44c6b7360adcd9782bc2db9b171858fcf",
+      "enabled": true,
+      "expires_at": "2026-11-30",
+      "plan_months": 0,
+      "total_months": 0,
+      "note": ""
     }
   ],
   "plans": {
