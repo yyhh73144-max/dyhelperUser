@@ -15,7 +15,7 @@
     {
       "wxid": "wxu2_709e17d8f42ce43d22803a8d8e027452b2e9df531f538a1072b923ad981e077f",
       "enabled": true,
-      "expires_at": "2026-12-01",
+      "expires_at": "2026-11-30",
       "plan_months": 1,
       "total_months": 1,
       "note": "测试"
@@ -39,7 +39,7 @@
     {
       "wxid": "wxu2_ffdd1a465ccf630b8f30a09e942748ed865e8ba051a9680f263ab17b4d9cb551",
       "enabled": true,
-      "expires_at": "2026-12-01",
+      "expires_at": "2026-11-30",
       "plan_months": 1,
       "total_months": 1,
       "note": "测试"
@@ -47,7 +47,7 @@
     {
       "wxid": "wxu2_8c03e10c333403ddbb35a9371b6cf944d0d4c0e6e6ed19b4ce7ca01e136107ac",
       "enabled": true,
-      "expires_at": "2026-12-01",
+      "expires_at": "2026-11-30",
       "plan_months": 1,
       "total_months": 1,
       "note": "测试"
@@ -55,7 +55,7 @@
     {
       "wxid": "wxu2_49a0b11600d95cacccb2d1885c02b1ff55a1bf91668429f65d602eff30e45438",
       "enabled": true,
-      "expires_at": "2026-12-01",
+      "expires_at": "2026-11-30",
       "plan_months": 1,
       "total_months": 1,
       "note": "测试"
@@ -71,7 +71,7 @@
     {
       "wxid": "wxu2_6409275bbbd894f3ee2d4fd958946c544071829ac0f5dbe525c9b0fab72cae91",
       "enabled": true,
-      "expires_at": "2026-12-01",
+      "expires_at": "2026-11-30",
       "plan_months": 1,
       "total_months": 1,
       "note": "测试"
