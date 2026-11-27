@@ -283,6 +283,38 @@
       "plan_months": 0,
       "total_months": 0,
       "note": ""
+    },
+    {
+      "wxid": "wxu2_5cb3490b9b652e4bf835c9fa43c666876619dbd0259bb263011feacb7ece4cac",
+      "enabled": true,
+      "expires_at": "2026-12-27",
+      "plan_months": 1,
+      "total_months": 1,
+      "note": ""
+    },
+    {
+      "wxid": "wxu2_55b53d30a0597aba3e93a19907891ab2e11fb53060a3ef3578150a7f1e02ab06",
+      "enabled": true,
+      "expires_at": "2026-12-27",
+      "plan_months": 1,
+      "total_months": 1,
+      "note": ""
+    },
+    {
+      "wxid": "wxu2_244c60649e0da08cadd7556d25aa41f6eb0bbd29c0389f818971063a80ea3711",
+      "enabled": true,
+      "expires_at": "2026-12-27",
+      "plan_months": 1,
+      "total_months": 1,
+      "note": ""
+    },
+    {
+      "wxid": "wxu2_e58313a81ba4e78c873c00f6e08549bdf6fa1ded7e80e56ae3e0554d3406dd4c",
+      "enabled": true,
+      "expires_at": "2027-02-25",
+      "plan_months": 3,
+      "total_months": 3,
+      "note": ""
     }
   ],
   "plans": {
